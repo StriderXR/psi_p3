@@ -1,0 +1,25 @@
+## Instrucciones para crear un nuevo proyecto con una nueva aplicacion
+## En el directorio Raiz
+$ django-admin.py startproject <Nombre_Proyecto>
+## En el directorio Raiz/<Nombre_Proyecto>
+$ python manage.py startapp <Nombre App>
+## Añadir <Nombre App> en INSTALLED_APPS de settings.py
+
+
+
+
+
+
+
+
+
+####################### Una vez la app esta lista ################
+1.- dropdb -U alumnodb -h localhost <Nombre Database>
+2.- createdb -U alumnodb -h localhost <Nombre Database>
+3.- python manage.py migrate
+4.- python manage.py createsuperuser ##(alumnodb, alumnodb)
+5.- python manage.py makemigrations rango
+6.- python manage.py sqlmigrate rango 000X
+7.- python populate_rango.py
+8.- python manage.py runserver
+
