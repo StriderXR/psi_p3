@@ -26,7 +26,7 @@ SECRET_KEY = 'xq%c(a189v6e83#-b4f0=e5^0kuv+$zmimr1+am8+wr5_f3c$g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://agile-retreat-48032.herokuapp.com/',]
+ALLOWED_HOSTS = ['https://pure-plains-48977.herokuapp.com/',]
 
 
 # Application definition
