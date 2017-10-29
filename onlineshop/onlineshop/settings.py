@@ -26,7 +26,7 @@ SECRET_KEY = 'xq%c(a189v6e83#-b4f0=e5^0kuv+$zmimr1+am8+wr5_f3c$g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://serene-wildwood-33823.herokuapp.com/',]
 
 
 # Application definition
