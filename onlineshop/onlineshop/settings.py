@@ -78,10 +78,8 @@ WSGI_APPLICATION = 'onlineshop.wsgi.application'
 
 import dj_database_url
 #DATABASE_URL ='postgres://alumnodb:alumnodb@localhost:5432/onlineshop'
-DATABASES = {
-}
+DATABASES = { 'default':dj_database_url.config()}
 
-DATABASES['default'] = dj_database_url.config()
 
 
 # Password validation
@@ -121,4 +119,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATICFILES_DIRS = [STATIC_DIR,]
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR,'staticHeroku')
+#STATIC_ROOT = os.path.join(BASE_DIR,'staticHeroku')
+STATIC_ROOT ='staticfiles'
