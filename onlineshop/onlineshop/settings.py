@@ -26,7 +26,7 @@ SECRET_KEY = 'xq%c(a189v6e83#-b4f0=e5^0kuv+$zmimr1+am8+wr5_f3c$g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://calm-lake-96349.herokuapp.com/',]
+ALLOWED_HOSTS = ['https://obscure-dusk-39585.herokuapp.com/',]
 
 
 # Application definition
@@ -75,13 +75,18 @@ WSGI_APPLICATION = 'onlineshop.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-
 import dj_database_url
-#DATABASE_URL ='postgres://alumnodb:alumnodb@localhost:5432/onlineshop'
-DATABASES = { 'default':dj_database_url.config()}
+#DATABASE_URL='postgres://alumnodb:alumnodb@localhost:5432/psi'
+import dj_database_url
 
+DATABASES = {
+    #'default': {
+    #   'ENGINE': 'django.db.backends.sqlite3',
+    #  'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #}
+}
 
-
+DATABASES['default'] = dj_database_url.config()
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 
@@ -119,5 +124,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATICFILES_DIRS = [STATIC_DIR,]
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'staticHeroku')
 #STATIC_ROOT = os.path.join(BASE_DIR,'staticHeroku')
-STATIC_ROOT ='staticfiles'
